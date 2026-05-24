@@ -1,0 +1,188 @@
+/* ============================================================
+   styles.css — Stylesheet for Hunter Harwood's Portfolio
+   Linked from: index.html
+   ============================================================ */
+
+
+/* ── RESET ──────────────────────────────────────────────────── */
+
+/* Remove default browser spacing from all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ── BACKGROUND & FONT ──────────────────────────────────────── */
+
+/* Body: gradient background and web-safe font stack */
+body {
+    /* Gradient background from light gray to white */
+    background: linear-gradient(180deg, #e8edf2 0%, #f5f7fa 100%);
+
+    /* Web-safe font: Arial with Helvetica and sans-serif fallbacks */
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222222;
+    min-height: 100vh;
+}
+
+
+/* ── LAYOUT WRAPPER ─────────────────────────────────────────── */
+
+/* Centers page content with a max width */
+header, nav, main, footer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/* ── HEADER ─────────────────────────────────────────────────── */
+
+/*
+   - Text centered
+   - Increased font size and weight on h1
+   - Padding around content
+   - Background color on the header section
+*/
+header {
+    background-color: #1a3a5c;   /* Dark navy background */
+    text-align: center;           /* Center the heading text */
+    padding: 2.5rem 1.5rem;       /* Top/bottom padding */
+    margin-bottom: 0;
+    max-width: 100%;              /* Header spans full width */
+}
+
+header h1 {
+    font-size: 2.4rem;            /* Larger font size */
+    font-weight: 700;             /* Bold weight */
+    color: #ffffff;               /* White text against dark background */
+    letter-spacing: 0.02em;
+}
+
+
+/* ── NAVIGATION MENU ────────────────────────────────────────── */
+
+/*
+   - Horizontal layout (flex row)
+   - Bullet points removed (list-style: none)
+   - Hover: background color and text color change
+*/
+nav {
+    background-color: #14304d;    /* Slightly darker than header */
+    max-width: 100%;              /* Nav spans full width */
+    padding: 0 1.5rem;
+}
+
+nav ul {
+    list-style: none;             /* Remove bullet points */
+    display: flex;                /* Horizontal layout */
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 860px;
+}
+
+/* Navigation link base style */
+nav a {
+    display: inline-block;
+    color: #b8cfe8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.75rem 1.25rem;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect: background and text color both change */
+nav a:hover {
+    background-color: #ffffff;
+    color: #1a3a5c;
+}
+
+
+/* ── MAIN CONTENT ───────────────────────────────────────────── */
+
+main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* ── SECTIONS (About, Projects, Contact) ───────────────────── */
+
+/*
+   - Padding and margin on each section
+   - Background color, border, and box-shadow distinguish content areas
+*/
+section {
+    background-color: #ffffff;       /* White card background */
+    border: 1px solid #c8d6e4;       /* Subtle border */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);   /* Soft drop shadow */
+    padding: 2rem 1.75rem;           /* Internal padding */
+    margin-bottom: 1.5rem;           /* Space between sections */
+    border-radius: 6px;
+}
+
+/* Section heading (About, Projects, Contact) */
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #1a3a5c;   /* Underline accent on headings */
+    display: inline-block;
+}
+
+/* Paragraph text within sections */
+section p {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.8;
+}
+
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+
+/*
+   - Smaller font size
+   - Centered text
+   - Contrasting background color and text color
+*/
+footer {
+    background-color: #1a3a5c;   /* Matches header — contrasts with page background */
+    color: #b8cfe8;               /* Light text contrasts against dark footer */
+    font-size: 0.8rem;            /* Smaller font size */
+    text-align: center;           /* Centered text */
+    padding: 1.25rem;
+    max-width: 100%;
+}
+
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+/* Stack nav links and shrink heading on small screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 1.5rem 1.25rem;
+    }
+}
