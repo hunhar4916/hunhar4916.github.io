@@ -1,12 +1,11 @@
 /* ============================================================
    styles.css — Stylesheet for Hunter Harwood's Portfolio
    Linked from: index.html
-   ============================================================ */
+   ============================================================ 
+   Hunter Harwood*/
 
 
-/* ── RESET ──────────────────────────────────────────────────── */
 
-/* Remove default browser spacing from all elements */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -14,14 +13,14 @@
 }
 
 
-/* ── BACKGROUND & FONT ──────────────────────────────────────── */
 
-/* Body: gradient background and web-safe font stack */
+
+
 body {
-    /* Gradient background from light gray to white */
+    
     background: linear-gradient(180deg, #e8edf2 0%, #f5f7fa 100%);
 
-    /* Web-safe font: Arial with Helvetica and sans-serif fallbacks */
+    
     font-family: Arial, Helvetica, sans-serif;
 
     font-size: 16px;
@@ -31,9 +30,9 @@ body {
 }
 
 
-/* ── LAYOUT WRAPPER ─────────────────────────────────────────── */
 
-/* Centers page content with a max width */
+
+
 header, nav, main, footer {
     max-width: 860px;
     margin: 0 auto;
@@ -42,46 +41,35 @@ header, nav, main, footer {
 }
 
 
-/* ── HEADER ─────────────────────────────────────────────────── */
 
-/*
-   - Text centered
-   - Increased font size and weight on h1
-   - Padding around content
-   - Background color on the header section
-*/
 header {
-    background-color: #1a3a5c;   /* Dark navy background */
-    text-align: center;           /* Center the heading text */
-    padding: 2.5rem 1.5rem;       /* Top/bottom padding */
+    background-color: #1a3a5c;   
+    text-align: center;           
+    padding: 2.5rem 1.5rem;       
     margin-bottom: 0;
-    max-width: 100%;              /* Header spans full width */
+    max-width: 100%;              
 }
 
 header h1 {
-    font-size: 2.4rem;            /* Larger font size */
-    font-weight: 700;             /* Bold weight */
-    color: #ffffff;               /* White text against dark background */
+    font-size: 2.4rem;            
+    font-weight: 700;             
+    color: #ffffff;               
     letter-spacing: 0.02em;
 }
 
 
-/* ── NAVIGATION MENU ────────────────────────────────────────── */
 
-/*
-   - Horizontal layout (flex row)
-   - Bullet points removed (list-style: none)
-   - Hover: background color and text color change
-*/
+
+
 nav {
-    background-color: #14304d;    /* Slightly darker than header */
-    max-width: 100%;              /* Nav spans full width */
+    background-color: #14304d;
+    max-width: 100%;
     padding: 0 1.5rem;
 }
 
 nav ul {
-    list-style: none;             /* Remove bullet points */
-    display: flex;                /* Horizontal layout */
+    list-style: none;             
+    display: flex;                
     flex-direction: row;
     justify-content: center;
     gap: 0.25rem;
@@ -90,7 +78,7 @@ nav ul {
     max-width: 860px;
 }
 
-/* Navigation link base style */
+
 nav a {
     display: inline-block;
     color: #b8cfe8;
@@ -101,17 +89,19 @@ nav a {
     letter-spacing: 0.08em;
     padding: 0.75rem 1.25rem;
     border-radius: 3px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect: background and text color both change */
+
 nav a:hover {
     background-color: #ffffff;
     color: #1a3a5c;
 }
 
 
-/* ── MAIN CONTENT ───────────────────────────────────────────── */
+
 
 main {
     padding-top: 2rem;
@@ -119,33 +109,39 @@ main {
 }
 
 
-/* ── SECTIONS (About, Projects, Contact) ───────────────────── */
 
-/*
-   - Padding and margin on each section
-   - Background color, border, and box-shadow distinguish content areas
-*/
+
+
 section {
-    background-color: #ffffff;       /* White card background */
-    border: 1px solid #c8d6e4;       /* Subtle border */
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);   /* Soft drop shadow */
-    padding: 2rem 1.75rem;           /* Internal padding */
-    margin-bottom: 1.5rem;           /* Space between sections */
+    background-color: #ffffff;
+    border: 1px solid #c8d6e4;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.75rem;
+    margin-bottom: 1.5rem;
     border-radius: 6px;
+
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Section heading (About, Projects, Contact) */
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+}
+
+
 section h2 {
     font-size: 1.5rem;
     font-weight: 700;
     color: #1a3a5c;
     margin-bottom: 0.75rem;
     padding-bottom: 0.4rem;
-    border-bottom: 2px solid #1a3a5c;   /* Underline accent on headings */
+    border-bottom: 2px solid #1a3a5c;
     display: inline-block;
 }
 
-/* Paragraph text within sections */
+
 section p {
     font-size: 0.95rem;
     color: #444444;
@@ -153,26 +149,85 @@ section p {
 }
 
 
-/* ── FOOTER ─────────────────────────────────────────────────── */
 
-/*
-   - Smaller font size
-   - Centered text
-   - Contrasting background color and text color
-*/
+table {
+    width: 100%;                         
+    border-collapse: collapse;           
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+caption {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a3a5c;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
+
+col.col-highlight {
+    background-color: #eaf1f8;
+}
+
+
+th, td {
+    border: 1px solid #c8d6e4;          
+    padding: 0.75rem 1rem;              
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Table header row */
+thead th {
+    background-color: #1a3a5c;         
+    color: #ffffff;                    
+    font-weight: 700;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f4f8fc;
+}
+
+
+tfoot td {
+    background-color: #e2eaf2;
+    color: #5a6a82;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.img-placeholder {
+    background-color: #c8d6e4;
+    color: #5a6a82;
+    font-size: 0.78rem;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    border-radius: 4px;
+    min-width: 120px;
+}
+
+
+
+
+
 footer {
-    background-color: #1a3a5c;   /* Matches header — contrasts with page background */
-    color: #b8cfe8;               /* Light text contrasts against dark footer */
-    font-size: 0.8rem;            /* Smaller font size */
-    text-align: center;           /* Centered text */
+    background-color: #1a3a5c;
+    color: #b8cfe8;
+    font-size: 0.8rem;
+    text-align: center;
     padding: 1.25rem;
     max-width: 100%;
 }
 
 
-/* ── RESPONSIVE ─────────────────────────────────────────────── */
 
-/* Stack nav links and shrink heading on small screens */
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.6rem;
@@ -184,5 +239,14 @@ footer {
 
     section {
         padding: 1.5rem 1.25rem;
+    }
+
+    /* Stack table on mobile */
+    table, thead, tbody, tfoot, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
     }
 }

@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <h1>Hunter Harwood's Portfolio</h1>
     </header>
 
     <!-- Navigation menu with internal links -->
-    <!-- Styled in styles.css: horizontal layout, no bullets, hover effects -->
+    <!-- Styled in styles.css: horizontal layout, no bullets, hover effects with transition -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -29,9 +30,9 @@
         </ul>
     </nav>
 
-    <!-- Main content sections: About, Projects, Contact -->
-    <!-- Each section has padding, margin, background, border, and box-shadow via styles.css -->
+    <!-- Main content: three sections, each zooms in on hover via styles.css -->
     <main>
+
         <section id="about">
             <h2>About</h2>
             <p>My name is Hunter Harwood and I am currently going to school for Software Development. My favorite coding language is Python, and I love steak!</p>
@@ -40,17 +41,65 @@
         <section id="projects">
             <h2>Projects</h2>
             <p>This section will showcase projects I complete throughout my web design coursework. Check back as new work gets added with each assignment.</p>
+
+            <!-- Project table: two sample projects with name, description, and image placeholder -->
+            <table>
+
+                <!-- Caption titles the table -->
+                <caption>Sample Projects</caption>
+
+                <!-- colgroup applies background color to column 1 (name) and column 3 (image) -->
+                <colgroup>
+                    <col class="col-highlight">
+                    <col>
+                    <col class="col-highlight">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Project row 1 -->
+                    <tr>
+                        <td>Portfolio Website</td>
+                        <td>A personal portfolio built with HTML and CSS to showcase coursework and skills learned in Web Design.</td>
+                        <td><div class="img-placeholder">Image Coming Soon</div></td>
+                    </tr>
+
+                    <!-- Project row 2 -->
+                    <tr>
+                        <td>Python Calculator</td>
+                        <td>A command-line calculator built in Python that performs basic arithmetic operations and handles user input.</td>
+                        <td><div class="img-placeholder">Image Coming Soon</div></td>
+                    </tr>
+                </tbody>
+
+                <!-- Table footer row -->
+                <tfoot>
+                    <tr>
+                        <td colspan="3">More projects will be added as coursework progresses.</td>
+                    </tr>
+                </tfoot>
+
+            </table>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
             <p>Interested in connecting? Feel free to reach out via GitHub or email. I am always open to feedback and collaboration.</p>
         </section>
+
     </main>
 
-    <!-- Footer: smaller font, centered text, contrasting background — see styles.css -->
+    <!-- Footer uses &copy; character entity — styled in styles.css -->
     <footer>
         <p>&copy; 2026 Hunter Harwood</p>
     </footer>
+
 </body>
 </html>
