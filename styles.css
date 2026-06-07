@@ -1,11 +1,12 @@
 /* ============================================================
    styles.css — Stylesheet for Hunter Harwood's Portfolio
    Linked from: index.html
-   ============================================================ 
-   Hunter Harwood*/
+   ============================================================ */
 
 
+/* ── RESET ──────────────────────────────────────────────────── */
 
+/* Remove default browser spacing from all elements */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -13,16 +14,11 @@
 }
 
 
-
-
+/* ── BACKGROUND & FONT ──────────────────────────────────────── */
 
 body {
-    
     background: linear-gradient(180deg, #e8edf2 0%, #f5f7fa 100%);
-
-    
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 16px;
     line-height: 1.7;
     color: #222222;
@@ -30,8 +26,7 @@ body {
 }
 
 
-
-
+/* ── LAYOUT WRAPPER ─────────────────────────────────────────── */
 
 header, nav, main, footer {
     max-width: 860px;
@@ -41,43 +36,48 @@ header, nav, main, footer {
 }
 
 
+/* ── HEADER ─────────────────────────────────────────────────── */
 
 header {
-    background-color: #1a3a5c;   
-    text-align: center;           
-    padding: 2.5rem 1.5rem;       
-    margin-bottom: 0;
-    max-width: 100%;              
+    background-color: #1a3a5c;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    max-width: 100%;
 }
 
 header h1 {
-    font-size: 2.4rem;            
-    font-weight: 700;             
-    color: #ffffff;               
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
     letter-spacing: 0.02em;
 }
 
 
+/* ── NAVIGATION — FLEXBOX ───────────────────────────────────── */
 
-
-
+/*
+   Flexbox applied to nav list:
+   - display: flex makes items horizontal
+   - flex-direction: row lines them up left to right
+   - gap: 0.25rem adds space between items
+*/
 nav {
     background-color: #14304d;
     max-width: 100%;
     padding: 0 1.5rem;
 }
 
-nav ul {
-    list-style: none;             
-    display: flex;                
-    flex-direction: row;
+/* Flexbox container for nav links */
+nav ul.nav-flex {
+    list-style: none;
+    display: flex;                /* Flexbox display */
+    flex-direction: row;          /* Horizontal row */
     justify-content: center;
-    gap: 0.25rem;
+    gap: 0.25rem;                 /* Space between nav items */
     padding: 0;
     margin: 0 auto;
     max-width: 860px;
 }
-
 
 nav a {
     display: inline-block;
@@ -89,11 +89,9 @@ nav a {
     letter-spacing: 0.08em;
     padding: 0.75rem 1.25rem;
     border-radius: 3px;
-
-    
+    /* Transition on background and text color for hover effect */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 nav a:hover {
     background-color: #ffffff;
@@ -101,35 +99,39 @@ nav a:hover {
 }
 
 
+/* ── MAIN CONTENT — FLEXBOX ─────────────────────────────────── */
 
-
-main {
+/*
+   Flexbox applied to main content area:
+   - display: flex stacks sections vertically
+   - flex-direction: column keeps sections in a single column
+   - gap: 1.5rem adds space between each section
+*/
+main.main-flex {
+    display: flex;                /* Flexbox display */
+    flex-direction: column;       /* Stack sections vertically */
+    gap: 1.5rem;                  /* Space between sections */
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 
-
-
+/* ── SECTIONS ───────────────────────────────────────────────── */
 
 section {
     background-color: #ffffff;
     border: 1px solid #c8d6e4;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     padding: 2rem 1.75rem;
-    margin-bottom: 1.5rem;
     border-radius: 6px;
-
-    
+    /* Smooth zoom transition on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 section:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
 }
-
 
 section h2 {
     font-size: 1.5rem;
@@ -141,7 +143,6 @@ section h2 {
     display: inline-block;
 }
 
-
 section p {
     font-size: 0.95rem;
     color: #444444;
@@ -149,14 +150,14 @@ section p {
 }
 
 
+/* ── TABLE ──────────────────────────────────────────────────── */
 
 table {
-    width: 100%;                         
-    border-collapse: collapse;           
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 1.5rem;
     font-size: 0.9rem;
 }
-
 
 caption {
     font-size: 1rem;
@@ -164,34 +165,28 @@ caption {
     color: #1a3a5c;
     text-align: left;
     margin-bottom: 0.5rem;
-    padding-bottom: 0.25rem;
 }
-
 
 col.col-highlight {
     background-color: #eaf1f8;
 }
 
-
 th, td {
-    border: 1px solid #c8d6e4;          
-    padding: 0.75rem 1rem;              
+    border: 1px solid #c8d6e4;
+    padding: 0.75rem 1rem;
     text-align: left;
     vertical-align: top;
 }
 
-/* Table header row */
 thead th {
-    background-color: #1a3a5c;         
-    color: #ffffff;                    
+    background-color: #1a3a5c;
+    color: #ffffff;
     font-weight: 700;
 }
-
 
 tbody tr:nth-child(even) {
     background-color: #f4f8fc;
 }
-
 
 tfoot td {
     background-color: #e2eaf2;
@@ -200,7 +195,6 @@ tfoot td {
     font-style: italic;
     text-align: center;
 }
-
 
 .img-placeholder {
     background-color: #c8d6e4;
@@ -213,8 +207,88 @@ tfoot td {
 }
 
 
+/* ── CONTACT FORM — FLEXBOX ─────────────────────────────────── */
+
+/*
+   Flexbox applied to the contact form:
+   - display: flex stacks labels and inputs vertically
+   - flex-direction: column keeps each field below the last
+   - gap: 0.6rem adds space between each label/input pair
+*/
+form.form-flex {
+    display: flex;                /* Flexbox display */
+    flex-direction: column;       /* Stack fields vertically */
+    gap: 0.6rem;                  /* Space between form elements */
+    margin-top: 1.5rem;
+}
+
+/* Label styling */
+form.form-flex label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin-top: 0.4rem;
+}
+
+/* Required field asterisk */
+.required {
+    color: #c0392b;
+}
+
+/* Input and textarea base style */
+form.form-flex input,
+form.form-flex textarea {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    color: #222222;
+    background-color: #f4f8fc;
+    border: 1px solid #c8d6e4;
+    border-radius: 4px;
+    outline: none;
+    /* Transition: border color animates smoothly on focus/hover */
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect on inputs and textarea */
+form.form-flex input:hover,
+form.form-flex textarea:hover {
+    border-color: #1a3a5c;
+}
+
+/* Focus effect on inputs and textarea */
+form.form-flex input:focus,
+form.form-flex textarea:focus {
+    border-color: #1a3a5c;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.12);
+}
+
+/* Submit button base style */
+form.form-flex button[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1a3a5c;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    /* Transition: background color animates smoothly on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+form.form-flex button[type="submit"]:hover {
+    background-color: #14304d;
+}
 
 
+/* ── FOOTER ─────────────────────────────────────────────────── */
 
 footer {
     background-color: #1a3a5c;
@@ -226,27 +300,62 @@ footer {
 }
 
 
+/* ── RESPONSIVE MEDIA QUERIES ───────────────────────────────── */
 
-
-@media (max-width: 600px) {
+/* Phone: max width 480px — single column, smaller text */
+@media (max-width: 480px) {
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
-    nav ul {
+    nav ul.nav-flex {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.1rem;
     }
 
     section {
-        padding: 1.5rem 1.25rem;
+        padding: 1.25rem 1rem;
     }
 
-    /* Stack table on mobile */
+    /* Stack table rows on small phones */
     table, thead, tbody, tfoot, th, td, tr {
         display: block;
     }
 
     thead tr {
         display: none;
+    }
+
+    form.form-flex button[type="submit"] {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+/* Tablet: 481px to 768px — moderate spacing */
+@media (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    section {
+        padding: 1.5rem 1.25rem;
+    }
+
+    form.form-flex button[type="submit"] {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+/* Desktop: 769px and above — full layout */
+@media (min-width: 769px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    section {
+        padding: 2rem 1.75rem;
     }
 }

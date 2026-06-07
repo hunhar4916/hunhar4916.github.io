@@ -20,18 +20,18 @@
         <h1>Hunter Harwood's Portfolio</h1>
     </header>
 
-    <!-- Navigation menu with internal links -->
-    <!-- Styled in styles.css: horizontal layout, no bullets, hover effects with transition -->
+    <!-- Navigation menu: flexbox layout applied via styles.css -->
+    <!-- Horizontal layout, no bullets, hover effects with transition -->
     <nav>
-        <ul>
+        <ul class="nav-flex">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main content: three sections, each zooms in on hover via styles.css -->
-    <main>
+    <!-- Main content: flexbox column layout, sections zoom in on hover -->
+    <main class="main-flex">
 
         <section id="about">
             <h2>About</h2>
@@ -89,14 +89,40 @@
             </table>
         </section>
 
+        <!-- Contact section with accessible form -->
         <section id="contact">
             <h2>Contact</h2>
             <p>Interested in connecting? Feel free to reach out via GitHub or email. I am always open to feedback and collaboration.</p>
+
+            <!-- Contact form: flexbox column layout applied via .form-flex in styles.css -->
+            <!-- Labels paired with each input for accessibility -->
+            <form class="form-flex" action="#" method="post">
+
+                <!-- Name field: required -->
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <!-- Email field: required -->
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+                <!-- Subject field -->
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What is this about?">
+
+                <!-- Message textarea: 5 rows as required -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Send Message</button>
+
+            </form>
         </section>
 
     </main>
 
-    <!-- Footer uses &copy; character entity — styled in styles.css -->
+    <!-- Footer uses &copy; character entity -->
     <footer>
         <p>&copy; 2026 Hunter Harwood</p>
     </footer>
